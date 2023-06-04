@@ -8,6 +8,12 @@ self.addEventListener('install', () => {
   self.skipWaiting();
 });
 
-self.addEventListener('push', () => {
-  console.log('Service Worker: Pushed');
+self.addEventListener('activate', () => {
+  console.log('Activating Service Worker ...');
+});
+
+self.addEventListener('fetch', (event) => {
+  console.log(event.request);
+
+  event.respondWith(fetch(event.request));
 });
