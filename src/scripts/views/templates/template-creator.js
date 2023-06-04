@@ -4,7 +4,7 @@ const createRestaurantDetailTemplate = (restaurant) => `
   <article class="restaurant-detail card transition">
     <div class="label" tabindex="0">${restaurant.city}</div>
     <div class="card-image" tabindex="0">
-      <img class="image transition lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant image"></img>
+      <img class="image transition lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}" alt="Restaurant image">
     </div>
     <div class="love-section flex justify-between">
       <div class="categories">
@@ -95,8 +95,7 @@ const createRestaurantItemTemplate = (restaurant) => {
   <article class="restaurant-item card transition">
     <div class="label" tabindex="0">${restaurant.city || '-'}</div>
     <div class="card-image" tabindex="0">
-      <img class="image transition lazyload" src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId || '-'}" alt="Restaurant image">
-      </img>
+      <img class="image transition lazyload" data-src="${CONFIG.BASE_IMAGE_URL + restaurant.pictureId || '-'}" alt="Restaurant image">
     </div>
     <div class="card-body">
       <div class="rating flex items-center">

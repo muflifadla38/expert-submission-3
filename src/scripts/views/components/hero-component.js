@@ -8,7 +8,7 @@ class HeroComponent extends HTMLElement {
         <section id="hero-section" class="hero-section">
         <picture>
           <source media="(max-width: 768px)" srcset="./images/heros/hero-image-small.jpg" type="image/jpeg">
-          <img src="./images/heros/hero-image-large.jpg" class="lazyload" alt="Hero image">
+          <img data-src="./images/heros/hero-image-large.jpg" class="lazyload" alt="Hero image">
         </picture>
         <p class="hero-title font-bold" tabindex="0">Temukan <span class="text-primary">Sensasi Pedas</span> dan <span
             class="text-primary">Lezat</span> di Geprek Teross</p>
